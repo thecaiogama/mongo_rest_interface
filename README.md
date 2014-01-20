@@ -39,13 +39,13 @@ Replace data completely based on the Mongo ID informed
 <code><b>Response:</b> HTTP/1.0 200</code><br/>
 <code><b>Structure:</b> [ {object} ]</code>
 
-<h4>Path /db/collection/id</h4>
+<h4>PATH /db/collection/id</h4>
 Replace part of the Object based on the information sent
 <code><b>Request:</b> MongoID and Object information</code><br/>
 <code><b>Response:</b> HTTP/1.0 200</code><br/>
 <code><b>Structure:</b> [ {object} ]</code>
 
-<h4>Path /db/collection/id</h4>
+<h4>DELETE /db/collection/id</h4>
 Delete one Object based on the Mongo ID informed
 <code><b>Request:</b> MongoID</code><br/>
 <code><b>Response:</b> HTTP/1.0 200</code><br/>

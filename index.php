@@ -18,6 +18,14 @@
 		}
 	};
 
+	$app->get('/',function() use($app){
+		$app->halt(400, 'please provide me a DB and a collection');
+	});
+
+		$app->get('/:db(/)',function() use($app){
+		$app->halt(400, 'please provide me a collection');
+	});
+
 	#id => document's MONGO ID
 	$app->get('/:db/:collection(/)(:id)', $validateMongo, function($db, $collection, $id = null) use($app, $mongo){
 		$app->response()->header('Content-Type', 'application/json');

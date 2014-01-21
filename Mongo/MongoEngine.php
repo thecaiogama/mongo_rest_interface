@@ -13,7 +13,12 @@ class MongoEngine{
 				$mongo = (!class_exists('MongoClient'))? "Mongo" : "MongoClient";
 				$this->mongoClass = $mongo;
 
-				self::setConn(new $mongo("mongodb://{$_username}:{$_password}@{$_host}", array("db"=>"admin")));
+				try {
+					self::setConn(new $mongo("mongodb://{$_username}:{$_password}@{$_host}", array("db"=>"admin")));
+				} catch (Exception $e) {
+					header('HTTP/1.0 400 Failed to connect - verify credentials');
+					exit();						
+				}
 		
 				if(!is_null(self::getConn())) {
 					$this->connected = true;

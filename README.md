@@ -1,11 +1,12 @@
 <h2>A REST interface between PHP and MongoDB</h2>
 
-This layer was create with the intention of retrieving and including data, it does not have the hability do create databases or collections. 
+This layer was create with the intention of retrieving and including data, it does not have the hability do create databases or collections.
 
 <h4>Required steps to make it work:</h4>
  - configure <b>user</b>, <b>password</b> and <b>host</b> on <b>/Mongo/MongoConf.php</b>
 
 ---------
+changes
 
 <h3>AVALIABLE ACTIONS</h3>
 
